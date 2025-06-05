@@ -17,16 +17,22 @@ namespace espacioCadeteria
             this.ListadoCadetes = MiCargaDeDatos.CargarCadetesDesdeCSV("InfoCadetes.csv");
         }
 
-        public void infoCadeteria(){
-            Console.WriteLine("CADETERIA");
+        public string infoCadeteria(){
+            return "CADETERIA\n, Nombre:" + this.Nombre + "\n, Telefono:" + this.Telefono + "\n LISTADO DE CADETES: ";
+            
+            /**Console.WriteLine("CADETERIA");
             Console.WriteLine("Nombre: "  + this.Nombre);
             Console.WriteLine("Telefono: "  + this.Telefono);
             //MostrarCadetes
-            Console.WriteLine("LISTADO DE CADETES");
+            Console.WriteLine("LISTADO DE CADETES");*/
+        }  
+
+        public string ListaCadetes(){  
             foreach (var cadete in this.ListadoCadetes)
             {
-                cadete.infoCadete();
+                return cadete.infoCadete();
             }
+            return "";
         }
     }
 }

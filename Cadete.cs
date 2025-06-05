@@ -20,8 +20,8 @@ namespace espacioCadete
 
         public int Id { get => id; set => id = value; }
 
-        public void infoCadete(){
-            Console.WriteLine($"ID: {this.id}, Nombre: {this.nombre}, Direccion: {this.direccion}, Telefono: {this.telefono}");
+        public string infoCadete(){
+            return $"ID: {this.id}, Nombre: {this.nombre}, Direccion: {this.direccion}, Telefono: {this.telefono}";
         }
     }
 
